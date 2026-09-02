@@ -1,5 +1,5 @@
-import Header from "./Header"
-import ProductCard from "./ProductCard";
+import Header from "./components/Header"
+import ProductCard from "./components/ProductCard";
 import { products } from "./lib/products";
 
 export default function HomePage() {
@@ -12,9 +12,6 @@ export default function HomePage() {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-      <a href="/cart" className="block mt-8 underline text-blue-600">
-        Go to Cart
-      </a>
     </main>
   );
 }
