@@ -1,13 +1,20 @@
-import Link from 'next/link';
+import Header from "./Header"
+import ProductCard from "./ProductCard";
+import { products } from "./lib/products";
 
-export default function CartPage() {
+export default function HomePage() {
   return (
-    <main className="p-8">
-      <h1 className="text-3xl font-bold mb-6">Your Cart</h1>
-      <p className="mb-4">Your cart is empty.</p>
-      <Link href="/" className="underline text-blue-600">
-        Back to Home
-      </Link>
+    <main className="p-8 bg-white min-h-screen">
+      <Header />
+      <h1 className="text-3xl font-bold mb-6">Donn Alleno Store</h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+      <a href="/cart" className="block mt-8 underline text-blue-600">
+        Go to Cart
+      </a>
     </main>
   );
 }
