@@ -1,6 +1,6 @@
-import Header from "./components/Header"
-import ProductCard from "./components/ProductCard";
-import { products } from "./lib/products";
+import Header from "./Header"
+import ProductCard from "./ProductCard";
+import { products } from "../lib/products";
 
 export default function HomePage() {
   return (
